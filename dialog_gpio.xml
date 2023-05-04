@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Configuração do GPIO"
+        android:textSize="@dimen/sp_20"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/dp_10"/>
+
+    <!-- Mensagem de aviso -->
+    <TextView
+        android:id="@+id/tvDes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/dp_10"/>
+
+    <!-- RecyclerView dos GPIOs -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGPIO"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="@dimen/dp_5"
+        android:background="@drawable/ll_border"
+        android:layout_marginBottom="@dimen/dp_10"/>
+
+    <!-- Botões -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <!-- Botão para ler configuração dos GPIOs -->
+        <TextView
+            android:id="@+id/tvGetAllGPIO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="Ler Configuração"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_16"/>
+
+        <!-- Botão para configurar os GPIOs -->
+        <TextView
+            android:id="@+id/tvConfigGPIO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configurar GPIO"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_16"/>
+
+        <!-- Botão para obter valor dos GPIOs -->
+        <TextView
+            android:id="@+id/tvGetGPIOVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:text="Obter Valor"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_16"/>
+
+        <!-- Botão para definir valor dos GPIOs -->
+        <TextView
+            android:id="@+id/tvSetGPIOVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Definir Valor"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/sp_16"
+            android:layout_marginStart="@dimen/dp_10"/>
+    </LinearLayout>
+
+    <!-- Botão para fechar a tela -->
+    <TextView
+        android:id="@+id/tv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fechar"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_gravity="end"/>
+
+</LinearLayout>
